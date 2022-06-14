@@ -9,8 +9,8 @@
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <title>testpage</title>
    <py-env>
-            - altair
-            - pandas
+            - numpy
+            - matplotlib.pyplot
         </py-env>
 </head>
    
@@ -29,18 +29,15 @@ for i in range(5):
    <h1>PyScriptでグラフ表示</h1>
         <div id="test"></div>
         <py-script output="test"> 
-import altair as alt
-import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
-source = pd.DataFrame({
-    'a': ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
-    'b': [28, 55, 43, 91, 81, 53, 19, 87, 52]
-})
+x = np.arange(-3, 3.1, 0.1)                 # -3から3まで0.1刻みのnumpy配列の作成
+y1 = np.sin(x)
+y2 = np.cos(x)
 
-alt.Chart(source).mark_bar().encode(
-    x='a',
-    y='b'
-)
+plt.plot(x,y1,y2)
+plt.show()
         </py-script>
    
 </body>
