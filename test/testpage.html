@@ -21,5 +21,23 @@ for i in range(5):
     <py-script>
     print('pyscriptの試し表示')
     </py-script>
+   
+   <h1>PyScriptでグラフ表示</h1>
+        <div id="test"></div>
+        <py-script output="test"> 
+import altair as alt
+import pandas as pd
+
+source = pd.DataFrame({
+    'a': ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
+    'b': [28, 55, 43, 91, 81, 53, 19, 87, 52]
+})
+
+alt.Chart(source).mark_bar().encode(
+    x='a',
+    y='b'
+)
+        </py-script>
+   
 </body>
 </html>
