@@ -10,7 +10,6 @@
     <title>testpage</title>
    <py-env>
             - matplotlib
-      　　　　　　　　　　　　- numpy
         </py-env>
 </head>
    
@@ -29,13 +28,12 @@ for i in range(5):
    <h1>PyScriptでグラフ表示</h1>
         <div id="test"></div>
         <py-script output="test"> 
-import numpy as np
 import matplotlib.pyplot as plt
- 
-left = np.array([1, 2, 3, 4, 5])
-height = np.array([100, 200, 300, 400, 500])
 
-plt.bar(left, height)
+x = [90, 120, 340, 450, 520]
+y = [1, 2, 3, 4, 5]
+     
+plt.plot(x, y)
 
 plt.show()
 
