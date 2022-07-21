@@ -1,43 +1,15 @@
    <!DOCTYPE html>
+
+    
 <html lang="ja">
    
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <title>testpage</title>
-   <py-env>
-            - matplotlib
-        </py-env>
 </head>
    
 <body>
     <h1>testpage</h1>
-    <py-script>
-for i in range(2):
-    print('Pythonで出力！')
-    </py-script>
-   
-   <h1>pythonでの表示</h1>
-    <py-script>
-    print('pyscriptの試し表示')
-    </py-script>
-   
-   <h1>PyScriptでグラフ表示</h1>
-        <div id="test"></div>
-        <py-script output="test"> 
-import matplotlib.pyplot as plt
-
-x = [90, 120, 340, 450, 520]
-y = [1, 2, 3, 4, 5]
-     
-plt.plot(x, y)
-
-plt.show()
-print('test')
-        </py-script>
+    
    
 </body>
 </html>
